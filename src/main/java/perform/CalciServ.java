@@ -19,6 +19,15 @@ public class CalciServ extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//doGet(request, response);
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		out.println("<center>");
@@ -27,23 +36,14 @@ public class CalciServ extends HttpServlet {
 		y=Integer.parseInt(request.getParameter("txtsno"));
 		String str=request.getParameter("operation");
 		if(str.equals("add"))
-			out.println("<h1>Result of addition is:"+(x+y)+"</h1>");
+			out.println("<h1 class='text-bg-danger'>Result of addition is:"+(x+y)+"</h1>");
 		else if(str.equals("sub"))
-			out.println("<h1>Result of Subtraction is:"+(x-y)+"</h1>");
+			out.println("<h1 class='text-bg-danger'>Result of Subtraction is:"+(x-y)+"</h1>");
 		else if(str.equals("mul"))
-			out.println("<h1>Result of Multiplication is:"+(x*y)+"</h1>");
+			out.println("<h1 class='text-bg-danger'>Result of Multiplication is:"+(x*y)+"</h1>");
 		else 
-			out.println("<h1>Result of Division is:"+(x/y)+"</h1>");
+			out.println("<h1 class='text-bg-danger'>Result of Division is:"+(x/y)+"</h1>");
 		out.close();
-		}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-		
 		
 	}
 
