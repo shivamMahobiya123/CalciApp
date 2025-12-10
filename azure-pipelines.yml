@@ -6,8 +6,8 @@
 trigger:
 - main
 
-#pool:
-  #vmImage: Azure Pipelines
+pool:
+  vmImage: Default
 
 steps:
 - script: echo Hello, world!
